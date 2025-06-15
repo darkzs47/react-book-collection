@@ -1,0 +1,132 @@
+:root {
+    --font: Arial, Helvetica, sans-serif;
+    --A700: #689f38;
+    --A400: #76ff03;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d5d5d5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    height: 80px;
+}
+
+.dark {
+    background-color: #222;
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    margin: 0 5px;
+    font-family: var(--font);
+    width: fit-content;
+}
+
+.link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 8px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    color: var(--A700);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.link:hover {
+    background-color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    color: var(--A400);
+}
+
+.active {
+    border: 2px solid #1e1e1e;
+    background-color: #1e1e1e;
+    color: var(--A400);
+}
+
+.counterBadge {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.favoriteIcon {
+    color: #ffffff;
+}
+
+.badgeCount {
+    position: absolute;
+    font-family: var(--font);
+    top: -6px;
+    right: -6px;
+    color: #ffffff;
+    border-radius: 50%;
+    background-color: red;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    min-width: 8px;
+    text-align: center;
+}
+
+h3 {
+    font-family: var(--font);
+    font-size: 24px;
+    padding: 8px;
+}
+
+.lastDiv {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.themeChanger {
+    display: flex;
+    align-items: center;
+}
+
+.sunny {
+    font-weight: bold;
+    color: #fff200;
+}
+
+.moon {
+    color: black;
+}
+
+.search {
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.62);
+}
+
+.searchIcon {
+    padding: 6px;
+}
+
+.searchInput {
+    position: absolute;
+    left: 10px;
+    padding: 6px;
+    font-size: 20px;
+}
