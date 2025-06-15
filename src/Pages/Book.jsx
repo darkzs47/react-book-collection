@@ -1,4 +1,6 @@
-function Book(){
+import React from "react";
+
+const Book = () => {
     return (
         <>
 
@@ -6,4 +8,4 @@ function Book(){
     )
 }
 
-export default Book
+export default React.memo(Book);

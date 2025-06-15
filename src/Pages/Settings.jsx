@@ -1,4 +1,6 @@
-function Settings() {
+import React from "react";
+
+const Settings = () => {
     return (
         <>
 
@@ -6,4 +8,4 @@ function Settings() {
     )
 }
 
-export default Settings;
+export default React.memo(Settings);

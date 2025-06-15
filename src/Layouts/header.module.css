@@ -1,23 +1,11 @@
-:root {
-    --font: Arial, Helvetica, sans-serif;
-    --A700: #689f38;
-    --A400: #76ff03;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d5d5d5;
+    background-color: var(--bg-color);
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     height: 80px;
-}
-
-.dark {
-    background-color: #222;
-    color: #fff;
-    border-bottom: 1px solid #444;
 }
 
 .navList {
@@ -66,7 +54,7 @@
 }
 
 .favoriteIcon {
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .badgeCount {
@@ -89,6 +77,7 @@ h3 {
     font-family: var(--font);
     font-size: 24px;
     padding: 8px;
+    color: var(--text-color)
 }
 
 .lastDiv {
@@ -112,19 +101,21 @@ h3 {
 }
 
 .search {
+    background-color: var(--input-bg);
+    border: 2px solid var(--input-border);
     border-radius: 4px;
-    border: 2px solid rgba(255, 255, 255, 0.62);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.62);
 }
 
 .searchIcon {
     padding: 6px;
+    color: var(--text-color);
 }
 
 .searchInput {
+    color: var(--input-text);
     position: absolute;
     left: 10px;
     padding: 6px;

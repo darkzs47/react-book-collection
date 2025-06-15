@@ -1,6 +1,7 @@
 import styles from "../Layouts/header.module.css";
 import {NavLink, useLocation} from "react-router-dom";
 import RouterPath from "../Routes.js";
+import React from "react";
 
 const Navigation = () => {
     const location = useLocation();
@@ -28,4 +29,4 @@ const Navigation = () => {
     )
 }
 
-export default Navigation;
+export default React.memo(Navigation);

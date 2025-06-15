@@ -1,4 +1,32 @@
+:root {
+  --font: Arial, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
+
+body.light {
+  --bg-color: #e6e6e6;
+  --text-color: #000000;
+  --A700: #45b800;
+  --A400: #76ff03;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+  --input-text: #000000;
+  --input-placeholder: #000000;
+}
+
+body.dark {
+  --bg-color: #3e3e3e;
+  --text-color: #ffffff;
+  --A700: #8cfd5f;
+  --A400: #76ff03;
+  --input-bg: #4a4a4a;
+  --input-border: #777777;
+  --input-text: #ffffff;
+  --input-placeholder: #ffffff;
+}
+
+
