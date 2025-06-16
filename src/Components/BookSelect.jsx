@@ -3,16 +3,16 @@ import React, {memo, useState} from "react";
 import styles from "../Layouts/filter.module.css"
 
 const books = [
-    'Oliver Hansen',
-    'Van Henry',
-    'April Tucker',
-    'Ralph Hubbard',
-    'Omar Alexander',
-    'Carlos Abbott',
-    'Miriam Wagner',
-    'Bradley Wilkerson',
-    'Virginia Andrews',
-    'Kelly Snyder',
+    {author: 'Oliver Hansen', value: 'Oliver Hansen'},
+    {author: 'Van Henry', value: 'Van Henry'},
+    {author: 'April Tucker', value: 'April Tucker'},
+    {author: 'Ralph Hubbard', value: 'Ralph Hubbard'},
+    {author: 'Omar Alexander', value: 'Omar Alexander'},
+    {author: 'Carlos Abbott', value: 'Carlos Abbott'},
+    {author: 'Miriam Wagner', value: 'Miriam Wagner'},
+    {author: 'Bradley Wilkerson', value: 'Bradley Wilkerson'},
+    {author: 'Virginia Andrews', value: 'Virginia Andrews'},
+    {author: 'Kelly Snyder', value: 'Kelly Snyder'},
 ];
 
 const BookSelect = () => {
@@ -32,13 +32,8 @@ const BookSelect = () => {
                 placeholder="Выберите авторов"
                 onChange={handleChange}
                 value={selectedBooks}
-            >
-                {books.map((book) => (
-                    <Option key={book} value={book}>
-                        {book}
-                    </Option>
-                ))}
-            </Select>
+                options={books}
+            />
         </>
     )
 }

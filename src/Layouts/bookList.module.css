@@ -1,7 +1,37 @@
 .bookList {
+    margin: 30px 20px 30px 0;
     border-radius: 5px;
     border: 2px solid var(--bg-color);
-    flex: 3;
-    margin-right: 20px;
+    flex: 5;
     background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 15rem);
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    max-height: 65vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.bookCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.favoriteIconTrue {
+    cursor: pointer;
+    color: #ff0000;
+}
+
+.favoriteIconFalse {
+    cursor: pointer;
+}
+
+.metaContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
 }

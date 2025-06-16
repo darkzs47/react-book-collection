@@ -22,6 +22,8 @@ body.light {
   --arrow-color: #000000;
   --slider-bg: #e0e0e0;
   --slider-rail: #cccccc;
+  --delete-button-color: #ff2600;
+  --delete-button-color-hover: #e11907;
 }
 
 body.dark {
@@ -40,6 +42,8 @@ body.dark {
   --slider-bg: #5a5a5a;
   --slider-rail: #777777;
   --main-bg: #919191;
+  --delete-button-color: #ff0000;
+  --delete-button-color-hover: #e61010;
 }
 
 .ant-select-selector, .ant-select-dropdown, .ant-select-item-option {
@@ -110,9 +114,11 @@ body.dark {
 }
 
 :where(.ant-btn-link) {
-  color: #ff2600 !important;
+  color: var(--delete-button-color) !important;
+  font-weight: bold !important;
 }
 
 :where(.ant-btn-link):hover {
-  color: #ca1100 !important;
+  font-weight: bold !important;
+  color: var(--delete-button-color-hover) !important;
 }

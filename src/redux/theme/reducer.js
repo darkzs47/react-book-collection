@@ -1,5 +1,4 @@
 import {TOGGLE_THEME} from "./actions.js";
-import CounterBadger from "../../Components/CounterBadger.jsx";
 
 const initialState = {
     mode: 'light',

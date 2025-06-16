@@ -1,11 +1,10 @@
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import styles from "../Layouts/header.module.css";
 import React from "react";
-import counterReducer from "../redux/counterBadger/reducer.js";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const CounterBadger = () => {
-    const countBadger = useSelector((state) => state.counter.count);
+    const countBadger = useSelector((state) => state.books.amountFavoriteBook);
 
     return (
         <>
