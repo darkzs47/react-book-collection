@@ -1,0 +1,70 @@
+.filter {
+    border-radius: 5px;
+    border: 2px solid var(--bg-color);
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 30px;
+    background-color: var(--bg-color);
+}
+
+.h3, h4 {
+    color: var(--text-color);
+    padding: 0;
+    margin: 20px 0;
+    font-family: var(--font);
+}
+
+.rangeWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.slider {
+    flex-grow: 1;
+}
+
+.input {
+    width: 70px;
+}
+
+.select {
+    width: 50%;
+}
+
+.slider {
+    width: 80%;
+}
+
+.checkbox {
+    color: var(--text-color);
+}
+
+.button {
+    margin: 10px 0;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 55%;
+    width: 10px;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+.button::after {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 55%;
+    width: 10px;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateY(-50%) rotate(-45deg);
+}

@@ -4,7 +4,7 @@
     align-items: center;
     background-color: var(--bg-color);
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--bg-color);
     height: 80px;
 }
 

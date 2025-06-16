@@ -9,7 +9,7 @@ import {useSelector} from "react-redux";
 
 function App() {
     const theme = useSelector((state) => state.theme.mode);
-    console.log(theme);
+
     useEffect(() => {
         document.body.className = theme
     }, [theme])
