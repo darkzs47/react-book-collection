@@ -1,4 +1,4 @@
-import {TOGGLE_FAVORITE} from "./actions.js";
+import {RESET_FAVORITE, TOGGLE_FAVORITE} from "./actions.js";
 
 export const initialState = {
     booksList: [
@@ -56,7 +56,7 @@ const bookReducer = (state = initialState, action) => {
         case TOGGLE_FAVORITE:
             const updatedBooksList = state.booksList.map(book =>
                 book.id === action.payload.id
-                    ? { ...book, favorite: !book.favorite }
+                    ? {...book, favorite: !book.favorite}
                     : book
             );
 
@@ -67,9 +67,18 @@ const bookReducer = (state = initialState, action) => {
                 booksList: updatedBooksList,
                 amountFavoriteBook,
             };
+        case RESET_FAVORITE:
+            return {
+                ...state,
+                booksList: state.booksList.map(book => ({
+                    ...book,
+                    favorite: false,
+                })),
+            }
+        default:
+            return state;
     }
 
-    return state;
 }
 
 export default bookReducer;
