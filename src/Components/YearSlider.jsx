@@ -1,25 +1,26 @@
 import {InputNumber, Slider} from "antd";
 import React, {memo, useState} from "react";
 import styles from "../Layouts/filter.module.css"
+import {useDispatch, useSelector} from "react-redux";
+import {selectYearsBooks} from "../redux/filters/actions.js";
 
 const YearSlider = () => {
-    const [startDate, setStartDate] = useState(2000);
-    const [endDate, setEndDate] = useState(2025);
+    const dispatch = useDispatch();
+    const {minYear: minYear, maxYear: maxYear} = useSelector((state) => state.filter.selectedYears);
 
     const onChange = (value) => {
         const [start, end] = value;
-        setStartDate(start);
-        setEndDate(end);
+        dispatch(selectYearsBooks(start, end));
     }
 
     const onStartChange = (value) => {
-        const newStart = Math.min(value, endDate);
-        setStartDate(newStart);
+        const newStart = Math.min(value, maxYear);
+        dispatch(selectYearsBooks(newStart, maxYear));
     };
 
     const onEndChange = (value) => {
-        const newEnd = Math.max(value, startDate);
-        setEndDate(newEnd);
+        const newEnd = Math.max(value, minYear);
+        dispatch(selectYearsBooks(minYear, newEnd));
     };
 
     return (
@@ -28,8 +29,8 @@ const YearSlider = () => {
             <div className={styles.rangeWrapper}>
                 <InputNumber
                     min={1950}
-                    max={endDate}
-                    value={startDate}
+                    max={2025}
+                    value={minYear}
                     onChange={onStartChange}
                     className={styles.input}
                 />
@@ -37,14 +38,14 @@ const YearSlider = () => {
                     range
                     min={1950}
                     max={2025}
-                    value={[startDate, endDate]}
+                    value={[minYear, maxYear]}
                     onChange={onChange}
                     className={styles.slider}
                 />
                 <InputNumber
-                    min={startDate}
+                    min={1900}
                     max={2025}
-                    value={endDate}
+                    value={maxYear}
                     onChange={onEndChange}
                     className={styles.input}
                 />

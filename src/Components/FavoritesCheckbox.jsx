@@ -1,15 +1,25 @@
 import {memo} from "react";
 import {Checkbox} from "antd";
 import styles from "../Layouts/filter.module.css"
+import {useDispatch, useSelector} from "react-redux";
+import {toggleFavoriteBooks} from "../redux/filters/actions.js";
 
 const FavoritesCheckbox = () => {
+    const dispatch = useDispatch();
+    const onlyFavorite = useSelector((state) => state.filter.onlyFavoriteBooks);
+
     const onChange = () => {
-        console.log("OnlyFavorite");
+        dispatch(toggleFavoriteBooks());
     }
 
     return (
         <>
-            <Checkbox className={styles.checkbox} onChange={onchange}>Только избранное</Checkbox>
+            <Checkbox
+                className={styles.checkbox}
+                checked={onlyFavorite}
+                onChange={onChange}>
+                Только избранное
+            </Checkbox>
         </>
     )
 }

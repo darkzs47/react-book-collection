@@ -15,8 +15,8 @@ export const initialState = {
             'id': 2,
             'img':
                 'public/images/13.jpg',
-            'title': 'Книга 1',
-            'author': 'Автор 1',
+            'title': 'Книга 2',
+            'author': 'Автор 2',
             'year': '2021',
             'favorite': false,
         },
@@ -24,8 +24,8 @@ export const initialState = {
             'id': 3,
             'img':
                 'public/images/20.jpg',
-            'title': 'Книга 1',
-            'author': 'Автор 1',
+            'title': 'Книга 3',
+            'author': 'Автор 3',
             'year': '2021',
             'favorite': false,
         },
@@ -33,8 +33,8 @@ export const initialState = {
             'id': 4,
             'img':
                 'public/images/21.jpg',
-            'title': 'Книга 1',
-            'author': 'Автор 1',
+            'title': 'Книга 4',
+            'author': 'Автор 4',
             'year': '2021',
             'favorite': false,
         },
@@ -42,8 +42,8 @@ export const initialState = {
             'id': 5,
             'img':
                 'public/images/22.jpg',
-            'title': 'Книга 1',
-            'author': 'Автор 1',
+            'title': 'Книга 5',
+            'author': 'Автор 5',
             'year': '2021',
             'favorite': false,
         },
