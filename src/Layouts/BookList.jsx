@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './bookList.module.css';
 import {useSelector} from "react-redux";
 import BookCard from "../Components/BookCard.jsx";
+import {useNavigate} from "react-router-dom";
 
 const BookList = () => {
+    const navigate = useNavigate();
     const books = useSelector(state => state.books.booksList);
     const filters = useSelector(state => state.filter);
     const querySearch = useSelector(state => state.search.searchQuery);
@@ -30,7 +32,9 @@ const BookList = () => {
     return (
         <div className={styles.bookList}>
             {filteredBooks.map(book => (
-                <BookCard key={book.id} book={book}/>
+                <BookCard key={book.id} book={book}
+                    onClick={() => {navigate(`/book/${book.id}`)}}
+                />
             ))}
         </div>
     )

@@ -23,6 +23,7 @@ function App() {
                     <Route path="/" element={<Main/>}/>
                     <Route path="/book/:id" element={<Book/>}/>
                     <Route path="/settings" element={<Settings/>}/>
+                    <Route path="/store/book" element={<Settings/>}/>
                 </Routes>
 
             </Router>

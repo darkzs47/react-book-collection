@@ -10,6 +10,7 @@ export const initialState = {
             'author': 'Author1',
             'year': '2021',
             'favorite': false,
+            'ISBN': "978-3-16-148410-0",
         },
         {
             'id': 2,
@@ -19,6 +20,7 @@ export const initialState = {
             'author': 'Author2',
             'year': '2021',
             'favorite': false,
+            'ISBN': "978-0-12-345678-9",
         },
         {
             'id': 3,
@@ -28,6 +30,7 @@ export const initialState = {
             'author': 'Author3',
             'year': '2021',
             'favorite': false,
+            'ISBN': "978-1-86197-876-9",
         },
         {
             'id': 4,
@@ -37,6 +40,7 @@ export const initialState = {
             'author': 'Author4',
             'year': '2021',
             'favorite': false,
+            'ISBN': "978-0-262-13472-9",
         },
         {
             'id': 5,
@@ -46,6 +50,7 @@ export const initialState = {
             'author': 'Author5',
             'year': '2021',
             'favorite': false,
+            'ISBN': "978-1-56619-909-4",
         },
     ],
     amountFavoriteBook: 0

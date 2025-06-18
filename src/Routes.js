@@ -1,7 +1,7 @@
 const RouterPath = [
     {label: 'Главная', path: '/'},
-    {label: 'Книга', path: '/book/1'},
     {label: 'Настройки', path: '/settings'},
+    {label: 'Добавить книгу', path: '/store/book'},
 ];
 
 export default RouterPath;
