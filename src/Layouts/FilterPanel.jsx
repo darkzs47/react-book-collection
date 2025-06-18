@@ -15,6 +15,7 @@ import {useSearchParams} from "react-router-dom";
 
 const FilterPanel = () => {
     const [searchParams, setSearchParams] = useSearchParams();
+    const querySearch = useSelector((state) => state.search.searchQuery) ?? "";
     const dispatch = useDispatch();
     const filters = useSelector((state) => state.filter);
 
@@ -24,7 +25,7 @@ const FilterPanel = () => {
         if (firstRenderRef.current) return;
         const {minYear, maxYear} = filters.selectedYears;
         const params = new URLSearchParams();
-
+        querySearch ? params.set("query", querySearch) : null;
         filters.selectedAuthors.forEach(author => params.append("author", author));
 
         if (minYear !== 1950 || maxYear !== 2025) {
@@ -33,7 +34,6 @@ const FilterPanel = () => {
         }
 
         if (filters.onlyFavoriteBooks) params.set("favorites", "true");
-        if (filters.length === 0) setSearchParams('');
         setSearchParams(params);
     }, [filters]);
 
@@ -63,7 +63,9 @@ const FilterPanel = () => {
 
     const clickHandler = () => {
         dispatch(resetFilters())
-        setSearchParams('');
+        const params = new URLSearchParams();
+        params.set("query", querySearch);
+        querySearch ? setSearchParams(params) : null;
     }
 
     return (

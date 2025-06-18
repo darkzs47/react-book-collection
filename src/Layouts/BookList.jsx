@@ -3,33 +3,34 @@ import styles from './bookList.module.css';
 import {useSelector} from "react-redux";
 import BookCard from "../Components/BookCard.jsx";
 
-const DEFAULT_MIN_YEAR = 1950;
-const DEFAULT_MAX_YEAR = 2025;
-
 const BookList = () => {
     const books = useSelector(state => state.books.booksList);
     const filters = useSelector(state => state.filter);
+    const querySearch = useSelector(state => state.search.searchQuery);
 
-    const isDefaultFilter =
-        filters.selectedAuthors.length === 0 &&
-        filters.selectedYears.minYear === DEFAULT_MIN_YEAR &&
-        filters.selectedYears.maxYear === DEFAULT_MAX_YEAR &&
-        !filters.onlyFavoriteBooks;
+    const normalizedQuery = querySearch?.trim().toLowerCase();
 
-    const filteredBooks = books.filter(book => {
+    const booksAfterSearch = normalizedQuery
+        ? books.filter(book =>
+            book.title.toLowerCase().includes(normalizedQuery) ||
+            book.author.toLowerCase().includes(normalizedQuery)
+        )
+        : books;
+
+    const filteredBooks = booksAfterSearch.filter(book => {
         if (filters.selectedAuthors.length > 0 && !filters.selectedAuthors.includes(book.author)) return false;
 
-        const year = book.year;
+        if (book.year < filters.selectedYears.minYear || book.year > filters.selectedYears.maxYear) return false;
 
-        if (year < filters.selectedYears.minYear || year > filters.selectedYears.maxYear) return false;
+        if (filters.onlyFavoriteBooks && !book.favorite) return false;
 
-        return !(filters.onlyFavoriteBooks && !book.favorite);
+        return true;
     });
 
     return (
         <div className={styles.bookList}>
-            {(isDefaultFilter ? books : filteredBooks).map(book => (
-                <BookCard key={book.id} book={book} />
+            {filteredBooks.map(book => (
+                <BookCard key={book.id} book={book}/>
             ))}
         </div>
     )
