@@ -29,7 +29,7 @@ const BookCard = ({book, onClick}) => {
                     title={book.title}
                     description={`${book.author}, ${book.year} год`}
                 />
-                <button style={{display: ''}} onClick={(e) => e.stopPropagation()}>
+                <button className={styles.favoriteIconContainer} onClick={(e) => e.stopPropagation()}>
                     {
                     book.favorite ?
                         <FavoriteIcon className={styles.favoriteIconTrue}

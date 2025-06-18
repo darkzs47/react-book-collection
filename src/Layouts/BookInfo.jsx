@@ -14,7 +14,7 @@ const BookInfo = ({book}) => {
         <aside className={styles.bookInfo}>
             <div className={styles.returnButtonContainer}>
                 <button
-                    onClick={() => navigate(-1)}
+                    onClick={() => navigate('/')}
                     className={styles.returnButton}
                 >На главную
                 </button>

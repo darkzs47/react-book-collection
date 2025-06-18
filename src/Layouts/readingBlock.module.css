@@ -4,14 +4,16 @@
     border: 2px solid var(--bg-color);
     flex: 5;
     background-color: var(--bg-color);
-    display: grid;
-    grid-template-columns: repeat(3, 15rem);
-    grid-column-gap: 2rem;
-    grid-row-gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
     padding: 30px 40px;
     max-height: 65vh;
     overflow-y: auto;
     scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.textSettings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
