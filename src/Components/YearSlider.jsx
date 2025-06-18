@@ -1,5 +1,5 @@
 import {InputNumber, Slider} from "antd";
-import React, {memo, useState} from "react";
+import React, {memo} from "react";
 import styles from "../Layouts/filter.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {selectYearsBooks} from "../redux/filters/actions.js";

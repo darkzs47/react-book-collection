@@ -1,4 +1,10 @@
-import {RESET_FILTERS, SELECT_AUTHORS_BOOKS, SELECT_YEARS_BOOKS, TOGGLE_FAVORITE_BOOKS} from "./actions.js";
+import {
+    RESET_FILTERS,
+    SELECT_AUTHORS_BOOKS,
+    SELECT_YEARS_BOOKS,
+    SET_ONLY_FAVORITE_BOOKS,
+    TOGGLE_FAVORITE_BOOKS
+} from "./actions.js";
 
 const initialState = {
     selectedAuthors: [],
@@ -11,6 +17,11 @@ const initialState = {
 
 const filterReducer = (state = initialState, action) => {
     switch (action.type) {
+        case SET_ONLY_FAVORITE_BOOKS:
+            return {
+                ...state,
+                onlyFavoriteBooks: action.payload,
+            }
         case TOGGLE_FAVORITE_BOOKS:
             return {
                 ...state,
