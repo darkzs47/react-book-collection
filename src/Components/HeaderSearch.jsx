@@ -11,7 +11,13 @@ const HeaderSearch = () => {
     const debouncedValue = useSelector((state) => state.search.searchQuery);
 
     const [searchParams, setSearchParams] = useSearchParams()
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState('');
+
+    useEffect(() => {
+        const query = searchParams.get("query") ?? '';
+        setInputValue(query);
+        dispatch(setDebouncedValue(query));
+    }, []);
 
     useEffect(() => {
         const params = new URLSearchParams(searchParams.toString());
