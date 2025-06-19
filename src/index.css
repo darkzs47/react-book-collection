@@ -26,6 +26,7 @@ body.light {
   --slider-rail: #cccccc;
   --delete-button-color: #ff2600;
   --delete-button-color-hover: #e11907;
+  --card-bg: #e1e1e1;
 }
 
 body.dark {
@@ -46,6 +47,7 @@ body.dark {
   --main-bg: #919191;
   --delete-button-color: #ff0000;
   --delete-button-color-hover: #e61010;
+  --card-bg: #989898;
 }
 
 .ant-select-selector, .ant-select-dropdown, .ant-select-item-option {

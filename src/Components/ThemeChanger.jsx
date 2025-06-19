@@ -3,7 +3,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import {Switch} from "@mui/material";
 import styles from "../Layouts/header.module.css";
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {toggleTheme} from "../redux/theme/actions.js";
 
 const ThemeChanger = () => {
