@@ -1,7 +1,6 @@
 import {memo} from "react";
 import styles from "../Pages/settings.module.css"
 import {Card} from "antd";
-
 const {Meta} = Card;
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
@@ -12,7 +11,7 @@ const MiniCard = () => {
                 cover={
                     <img
                         alt="image"
-                        src={'../../public/images/1.jpg'}
+                        src={'../../public/images/0.png'}
                         style={{height: "100px"}}
                     />
                 }
