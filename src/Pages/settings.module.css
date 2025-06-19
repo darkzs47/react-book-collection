@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-bg);
+    overflow: hidden;
+    margin: 50px;
+}

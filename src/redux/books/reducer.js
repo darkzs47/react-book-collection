@@ -79,6 +79,7 @@ const bookReducer = (state = initialState, action) => {
                     ...book,
                     favorite: false,
                 })),
+                amountFavoriteBook: 0,
             }
         default:
             return state;
