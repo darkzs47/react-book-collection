@@ -7,7 +7,6 @@ import TextFieldsIcon from '@mui/icons-material/TextFields';
 import {useBookPageContext} from "../localContexts/BookPageContext.jsx";
 
 const TextSettings = () => {
-
     const { fontSize, setFontSize, fontStyle, setFontStyle, textColor, setTextColor } = useBookPageContext();
 
     return (

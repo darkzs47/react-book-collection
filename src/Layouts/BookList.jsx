@@ -32,9 +32,9 @@ const BookList = () => {
     return (
         <div className={styles.bookList}>
             {filteredBooks.map(book => (
-                <BookCard key={book.id} book={book}
-                    onClick={() => {navigate(`/book/${book.id}`)}}
-                />
+                    <BookCard key={book.id} book={book}
+                              onClick={() => {navigate(`/book/${book.id}`)}}
+                    />
             ))}
         </div>
     )
