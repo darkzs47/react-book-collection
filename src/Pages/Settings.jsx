@@ -5,13 +5,14 @@ import {useDispatch} from "react-redux";
 import {resetFavorite} from "../redux/books/actions.js";
 import ThemeChanger from "../Components/ThemeChanger.jsx";
 import Preview from "../Layouts/Preview.jsx";
+import TextSettings from "../Components/TextSettings.jsx";
 
 const Settings = () => {
 
     const dispatch = useDispatch();
 
     const clickHandler = () => {
-        dispatch(resetFavorite())
+        if (confirm("Вы действительно хотите сбросить всё избранное?")) dispatch(resetFavorite())
     }
 
     return (

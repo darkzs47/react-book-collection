@@ -1,4 +1,5 @@
-import {RESET_FAVORITE, TOGGLE_FAVORITE} from "./actions.js";
+import {ADD_BOOK, RESET_FAVORITE, TOGGLE_FAVORITE} from "./actions.js";
+import book from "../../Pages/Book.jsx";
 
 export const initialState = {
     booksList: [
@@ -80,6 +81,19 @@ const bookReducer = (state = initialState, action) => {
                     favorite: false,
                 })),
                 amountFavoriteBook: 0,
+            }
+        case ADD_BOOK:
+            return {
+                ...state,
+                booksList: [...state.booksList, {
+                    id: action.payload.id,
+                    img: action.payload.img,
+                    title: action.payload.title,
+                    author: action.payload.author,
+                    year: action.payload.year,
+                    favorite: action.payload.favorite,
+                    ISBN: action.payload.ISBN,
+                }],
             }
         default:
             return state;
