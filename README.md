@@ -1,12 +1,10 @@
-# React + Vite
+# Некоторые вопросы, возникшие во время выполнения
+- Как происходит ререндер компонента, в котором есть useSelector(state из redux'a). Правильно ли я думаю, что 
+React следит за значением стейта, который написан в useSelector, и при обновлении этого стейта ререндерит компонент?
+- Как хранить css модули в структуре проекта. Рядом с компонентом для которого они предназначены, или создавать какую-то 
+папку где будет несколько модеулей для компонентов, находящихся в одной папке? То есть папка с компонентами и в ней же папка
+с модулями для этих компонентов.
+- Как использовать модули и правильно ли я их использую в этом проекте: модули писать для страниц и слоев(layouts), а стили для компонентов,
+используемых в каком-то слое, писать в css модуле этого слоя?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Добавление книг реализовал только в reducer'e и action'e, в компонентах этого нет. Применение настроек к новым книгам тоже пропустил
